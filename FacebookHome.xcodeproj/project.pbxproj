@@ -13,7 +13,10 @@
 		8243C9AE242D704200FD0EC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8243C9AD242D704200FD0EC7 /* Assets.xcassets */; };
 		8243C9B1242D704200FD0EC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8243C9B0242D704200FD0EC7 /* Preview Assets.xcassets */; };
 		8243C9B4242D704200FD0EC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8243C9B2242D704200FD0EC7 /* LaunchScreen.storyboard */; };
-		8243C9BC242D708700FD0EC7 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8243C9BB242D708700FD0EC7 /* MainController.swift */; };
+		8292E376242F86120095B862 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8292E374242F86120095B862 /* MainViewController.swift */; };
+		8292E377242F86120095B862 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8292E375242F86120095B862 /* MainViewController.xib */; };
+		8292E37B242F91A50095B862 /* FacebookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8292E379242F91A50095B862 /* FacebookCell.swift */; };
+		8292E37C242F91A50095B862 /* FacebookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8292E37A242F91A50095B862 /* FacebookCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +28,10 @@
 		8243C9B0242D704200FD0EC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8243C9B3242D704200FD0EC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8243C9B5242D704200FD0EC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8243C9BB242D708700FD0EC7 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		8292E374242F86120095B862 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8292E375242F86120095B862 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		8292E379242F91A50095B862 /* FacebookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookCell.swift; sourceTree = "<group>"; };
+		8292E37A242F91A50095B862 /* FacebookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacebookCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +64,16 @@
 		8243C9A6242D704100FD0EC7 /* FacebookHome */ = {
 			isa = PBXGroup;
 			children = (
+				8292E378242F91800095B862 /* cell */,
 				8243C9A7242D704100FD0EC7 /* AppDelegate.swift */,
 				8243C9A9242D704100FD0EC7 /* SceneDelegate.swift */,
 				8243C9AB242D704100FD0EC7 /* ContentView.swift */,
 				8243C9AD242D704200FD0EC7 /* Assets.xcassets */,
 				8243C9B2242D704200FD0EC7 /* LaunchScreen.storyboard */,
 				8243C9B5242D704200FD0EC7 /* Info.plist */,
-				8243C9BB242D708700FD0EC7 /* MainController.swift */,
 				8243C9AF242D704200FD0EC7 /* Preview Content */,
+				8292E374242F86120095B862 /* MainViewController.swift */,
+				8292E375242F86120095B862 /* MainViewController.xib */,
 			);
 			path = FacebookHome;
 			sourceTree = "<group>";
@@ -76,6 +84,15 @@
 				8243C9B0242D704200FD0EC7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8292E378242F91800095B862 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				8292E379242F91A50095B862 /* FacebookCell.swift */,
+				8292E37A242F91A50095B862 /* FacebookCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +155,9 @@
 			files = (
 				8243C9B4242D704200FD0EC7 /* LaunchScreen.storyboard in Resources */,
 				8243C9B1242D704200FD0EC7 /* Preview Assets.xcassets in Resources */,
+				8292E37C242F91A50095B862 /* FacebookCell.xib in Resources */,
 				8243C9AE242D704200FD0EC7 /* Assets.xcassets in Resources */,
+				8292E377242F86120095B862 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,10 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8243C9BC242D708700FD0EC7 /* MainController.swift in Sources */,
 				8243C9A8242D704100FD0EC7 /* AppDelegate.swift in Sources */,
 				8243C9AA242D704100FD0EC7 /* SceneDelegate.swift in Sources */,
 				8243C9AC242D704100FD0EC7 /* ContentView.swift in Sources */,
+				8292E376242F86120095B862 /* MainViewController.swift in Sources */,
+				8292E37B242F91A50095B862 /* FacebookCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
