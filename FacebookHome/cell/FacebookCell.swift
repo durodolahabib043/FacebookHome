@@ -8,14 +8,15 @@
 
 import UIKit
 
-class FacebookCell: UICollectionViewCell {
+class FacebookCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var timePostedLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-          backgroundColor = .lightGray
+        backgroundColor = .white
+ 
     }
     
 }
