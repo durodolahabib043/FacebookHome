@@ -17,7 +17,7 @@
 		8292E377242F86120095B862 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8292E375242F86120095B862 /* MainViewController.xib */; };
 		8292E37B242F91A50095B862 /* FacebookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8292E379242F91A50095B862 /* FacebookCell.swift */; };
 		8292E37C242F91A50095B862 /* FacebookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8292E37A242F91A50095B862 /* FacebookCell.xib */; };
-		82A953172430E6150067FAB5 /* FacebookHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A953152430E6150067FAB5 /* FacebookHeader.swift */; };
+		82A953172430E6150067FAB5 /* HorizontalScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A953152430E6150067FAB5 /* HorizontalScrollCell.swift */; };
 		82A953182430E6150067FAB5 /* FacebookHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A953162430E6150067FAB5 /* FacebookHeader.xib */; };
 		82A9531C2431027C0067FAB5 /* SubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A9531A2431027C0067FAB5 /* SubCell.swift */; };
 		82A9531D2431027C0067FAB5 /* SubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A9531B2431027C0067FAB5 /* SubCell.xib */; };
@@ -36,7 +36,7 @@
 		8292E375242F86120095B862 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		8292E379242F91A50095B862 /* FacebookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookCell.swift; sourceTree = "<group>"; };
 		8292E37A242F91A50095B862 /* FacebookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacebookCell.xib; sourceTree = "<group>"; };
-		82A953152430E6150067FAB5 /* FacebookHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookHeader.swift; sourceTree = "<group>"; };
+		82A953152430E6150067FAB5 /* HorizontalScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollCell.swift; sourceTree = "<group>"; };
 		82A953162430E6150067FAB5 /* FacebookHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacebookHeader.xib; sourceTree = "<group>"; };
 		82A9531A2431027C0067FAB5 /* SubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCell.swift; sourceTree = "<group>"; };
 		82A9531B2431027C0067FAB5 /* SubCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubCell.xib; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				82A95319243102510067FAB5 /* subcell */,
-				82A953142430E5EE0067FAB5 /* header */,
+				82A953142430E5EE0067FAB5 /* horizontal */,
 				8292E378242F91800095B862 /* cell */,
 				8243C9A7242D704100FD0EC7 /* AppDelegate.swift */,
 				8243C9A9242D704100FD0EC7 /* SceneDelegate.swift */,
@@ -105,13 +105,13 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
-		82A953142430E5EE0067FAB5 /* header */ = {
+		82A953142430E5EE0067FAB5 /* horizontal */ = {
 			isa = PBXGroup;
 			children = (
-				82A953152430E6150067FAB5 /* FacebookHeader.swift */,
+				82A953152430E6150067FAB5 /* HorizontalScrollCell.swift */,
 				82A953162430E6150067FAB5 /* FacebookHeader.xib */,
 			);
-			path = header;
+			path = horizontal;
 			sourceTree = "<group>";
 		};
 		82A95319243102510067FAB5 /* subcell */ = {
@@ -203,7 +203,7 @@
 				8243C9AC242D704100FD0EC7 /* ContentView.swift in Sources */,
 				82A9531C2431027C0067FAB5 /* SubCell.swift in Sources */,
 				8292E376242F86120095B862 /* MainViewController.swift in Sources */,
-				82A953172430E6150067FAB5 /* FacebookHeader.swift in Sources */,
+				82A953172430E6150067FAB5 /* HorizontalScrollCell.swift in Sources */,
 				8292E37B242F91A50095B862 /* FacebookCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

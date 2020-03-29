@@ -10,19 +10,19 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-
     @IBOutlet weak var tableView: UITableView!
+
     let facebookCellIdentifer = "FacebookCellIdentifer"
-    let facebookCellXib = "FacebookCell" // add horixonatal collectioview
-    let facebookHeaderIdentifer = "facebookHeaderIdentifer"
-    let facebookHeaderXib = "FacebookHeader"
+    let facebookCellXib = "FacebookCell"
+    let facebookScrollCellIdentifer = "facebookHeaderIdentifer"
+    let facebookScrollCellXib = "FacebookHeader"
 
     fileprivate func setUpCollectionView() {
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib.init(nibName: facebookCellXib, bundle: nil), forCellReuseIdentifier: facebookCellIdentifer)
-        tableView.register(UINib.init(nibName: facebookHeaderXib, bundle: nil), forCellReuseIdentifier: facebookHeaderIdentifer)
+        tableView.register(UINib.init(nibName: facebookScrollCellXib, bundle: nil), forCellReuseIdentifier: facebookScrollCellIdentifer)
 
     }
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ extension MainViewController :UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.row == 0){
-            let cell = tableView.dequeueReusableCell(withIdentifier: facebookHeaderIdentifer, for: indexPath) as! FacebookHeader
+            let cell = tableView.dequeueReusableCell(withIdentifier: facebookScrollCellIdentifer, for: indexPath) as! HorizontalScrollCell
             return cell ;
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: facebookCellIdentifer, for: indexPath) as! FacebookCell
