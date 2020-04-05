@@ -87,22 +87,22 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-import SwiftUI
-struct ContentViewPreviews: PreviewProvider {
-    @available(iOS 13.0.0, *)
-    @available(iOS 13.0, *)
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-
-    struct ContainerView: UIViewControllerRepresentable {
-        public typealias UIViewControllerType = MainViewController
-        @available(iOS 13.0, *)
-        func makeUIViewController(context _: UIViewControllerRepresentableContext<ContentViewPreviews.ContainerView>) -> ContentViewPreviews.ContainerView.UIViewControllerType {
-            return MainViewController()
-        }
-
-        @available(iOS 13.0, *)
-        func updateUIViewController(_: ContentViewPreviews.ContainerView.UIViewControllerType, context _: UIViewControllerRepresentableContext<ContentViewPreviews.ContainerView>) {}
-    }
-}
+//import SwiftUI
+//struct ContentViewPreviews: PreviewProvider {
+//    @available(iOS 13.0.0, *)
+//    @available(iOS 13.0, *)
+//    static var previews: some View {
+//        ContainerView().edgesIgnoringSafeArea(.all)
+//    }
+//
+//    struct ContainerView: UIViewControllerRepresentable {
+//        public typealias UIViewControllerType = MainViewController
+//        @available(iOS 13.0, *)
+//        func makeUIViewController(context _: UIViewControllerRepresentableContext<ContentViewPreviews.ContainerView>) -> ContentViewPreviews.ContainerView.UIViewControllerType {
+//            return MainViewController()
+//        }
+//
+//        @available(iOS 13.0, *)
+//        func updateUIViewController(_: ContentViewPreviews.ContainerView.UIViewControllerType, context _: UIViewControllerRepresentableContext<ContentViewPreviews.ContainerView>) {}
+//    }
+//}
