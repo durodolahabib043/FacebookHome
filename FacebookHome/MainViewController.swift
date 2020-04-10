@@ -29,8 +29,6 @@ class MainViewController: UIViewController {
         setUpCollectionView()
         addNavigationBar()
     }
-
-
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
@@ -53,15 +51,21 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let button = UIButton()
         button.setTitle("Title Button", for: .normal)
 
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default) // UIImage.init(named: "transparent.png")
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.barTintColor = .clear
+        navigationController?.view.backgroundColor = .clear
         // itesm
         let search = UIBarButtonItem(title: "Search", style: .plain, target: self, action: Selector(("didTapEditButton")))
         let edit = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: Selector(("didTapEditButton")))
         navigationItem.rightBarButtonItems = [search, edit]
         navigationItem.leftBarButtonItem = barButton
     }
+
     @objc func didTapEditButton() {
-           print("print")
-       }
+        print("print")
+    }
 
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return 12
@@ -85,10 +89,27 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return view.frame.height - 100
         }
     }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // let safeAreaTop = UIApplication.shared.windows.filter{$0.isKeyWindow}.first?.safeAreaInsets.top ?? 0
+        let magicalSafeAreaTop: CGFloat = 0
+        let offSet = scrollView.contentOffset.y + magicalSafeAreaTop
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offSet))
+        print(scrollView.contentOffset.y)
+    }
+
+//    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+//       if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
+//          navigationController?.setNavigationBarHidden(true, animated: true) // show nav
+//
+//       } else {
+//          navigationController?.setNavigationBarHidden(false, animated: true) // hide nav
+//       }
+//    }
 }
 
-//import SwiftUI
-//struct ContentViewPreviews: PreviewProvider {
+// import SwiftUI
+// struct ContentViewPreviews: PreviewProvider {
 //    @available(iOS 13.0.0, *)
 //    @available(iOS 13.0, *)
 //    static var previews: some View {
@@ -105,4 +126,4 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 //        @available(iOS 13.0, *)
 //        func updateUIViewController(_: ContentViewPreviews.ContainerView.UIViewControllerType, context _: UIViewControllerRepresentableContext<ContentViewPreviews.ContainerView>) {}
 //    }
-//}
+// }
